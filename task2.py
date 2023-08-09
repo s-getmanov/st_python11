@@ -42,7 +42,6 @@ def new_pet(name):
 
 #Функции работы с данными
 def get_pet_by_id(id):
-
     if id in pets:
         return pets[id]
     return False
@@ -58,7 +57,6 @@ def get_pet_data(pet):
     return False
 
 def input_pet_data(id):
-
     current_pet = get_pet_by_id(id)
 
     if not current_pet:
@@ -82,8 +80,7 @@ def input_pet_data(id):
     if not input_data == "":
         current_pet_data["Возраст питомца"] = int(input_data)  
 
-def print_pet(id):
-   
+def print_pet(id):   
     current_pet = get_pet_by_id(id)
 
     if not current_pet:
@@ -131,8 +128,7 @@ def hendler_pets_list():
         print_pet(k)        
 
 #Роутер. Обрабатывает команды. При вводе команды stop возвращает ложь для завершение цикла обработки команд.
-def route_commands(commands):
-    
+def route_commands(commands):    
     command = input(f"Введите команду(доступные команды {list(commands)}):")
 
     if not command in commands:
