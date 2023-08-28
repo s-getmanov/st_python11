@@ -18,7 +18,7 @@ def factorial(n):
 n = int(input("Введите число:"))
 factorials = []
 
-for i in range(n,0,-1):
+for i in range(factorial(n),0,-1):
    factorials.append(factorial(i))
 
 print(f"Получился такой список: {factorials}")
